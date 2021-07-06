@@ -25,7 +25,7 @@ RUN git clone https://github.com/cgreen-devs/cgreen && \
 
 # Then install it for packaging
 RUN cd cgreen/build && \
-    cmake -DCMAKE_INSTALL_PREFIX:Path=../../cgreen_${VERSION}_amd64 .. && make install
+    cmake -DCMAKE_INSTALL_PREFIX:Path=../../cgreen_${VERSION}_amd64/usr/local .. && make install
 
 RUN cd cgreen_${VERSION}_amd64 && \
     mkdir DEBIAN && \
